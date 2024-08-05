@@ -2,7 +2,7 @@
     <img src="{{ product.imageUrl}}" alt="{{ product.name }}" class="movie-poster" />
     <mat-card-content>
       <div class="movie-spec">
-        <h2 class="movie-title">
+        <h5 class="movie-title">
           {{ product.name }}
           <button
             mat-icon-button
@@ -21,36 +21,22 @@
           >
             <mat-icon>info</mat-icon>
           </button>
-        </h2>
+        </h5>
         <p class="movie-rating">{{ product.amount }}</p>
       </div>
   
       @if(show){
       <p class="movie-summary">{{ product.description }}</p>
       }
-  
-      <div class="action-buttons-container">
-        <!-- <app-counter /> -->
-  
-        <!-- <div>
-          <button
-            mat-icon-button
-            aria-label="Delete movie"
-            color="warn"
-            (click)="deleteMovie()"
-          >
-            <mat-icon>delete</mat-icon>
-          </button>
-          <button
-            mat-icon-button
-            aria-label="Delete movie"
-            color="primary"
-            (click)="editMovie()"
-          >
-            <mat-icon>edit</mat-icon>
-          </button>
-        </div> -->
-      </div>
+
+
+        <button
+        mat-icon-button
+        aria-label="Add to cart"
+        (click)="AddToCart()">
+        <mat-icon>Addtocart</mat-icon>
+        </button>
+    
     </mat-card-content>
   </mat-card>
   

@@ -8,7 +8,12 @@
         </h2>
         <p class="movie-rating">{{ product.amount }}</p>
       </div>
+      <img src="{{product.imageUrl}}" alt="">
       <p class="movie-summary">{{ product.description }}</p>
     </div>
+
+    <div class="example-button-row">
+        <a mat-raised-button routerLink="/products">Back</a>
+      </div>
   </div>
   

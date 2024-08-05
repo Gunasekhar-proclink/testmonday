@@ -5,6 +5,7 @@ import { Iproduct } from './iproduct';
   providedIn: 'root'
 })
 export class ProductdataService {
+  cart: Iproduct[] | undefined;
 
   constructor() { }
   API_KEY = "https://66b0b3316a693a95b539d955.mockapi.io/products" ; 

@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { ProductdataService } from '../productdata.service';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 import { Iproduct } from '../iproduct';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
@@ -8,7 +13,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 @Component({
   selector: 'app-productoverview',
   standalone: true,
-  imports: [],
+  imports: [RouterLink , RouterOutlet , MatBadgeModule , MatButtonModule , MatIconModule , MatCardModule],
   templateUrl: './productoverview.component.html',
   styleUrl: './productoverview.component.scss'
 })

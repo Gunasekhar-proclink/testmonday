@@ -19,6 +19,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './prodt.component.scss'
 })
 export class ProdtComponent {
+AddToCart() {
+throw new Error('Method not implemented.');
+}
+
   @Input() product = {
     id: '',
     name: 'defaultproduct',
