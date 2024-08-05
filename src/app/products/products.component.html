@@ -1,1 +1,12 @@
-<p>products works!</p>
+<section class="movie-list-container">
+  @if(isLoading){
+  <h1>Loading...</h1>
+  } @for (movie of productList; track movie.id){
+  <app-prodt
+    [product]="movie"
+    [id]="movie.id"
+  />
+  }
+</section>
+
+<h1>{{ msg }}</h1>
