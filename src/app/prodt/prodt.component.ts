@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input , EventEmitter , Output } from '@angular/core';
+import { Iproduct } from '../iproduct';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
@@ -19,9 +20,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './prodt.component.scss'
 })
 export class ProdtComponent {
-AddToCart() {
-throw new Error('Method not implemented.');
-}
+  @Output() addItemEvent: EventEmitter<Iproduct> = new EventEmitter<Iproduct>();
+  addToCart() {
+    this.addItemEvent.emit(this.product);
+  }
 
   @Input() product = {
     id: '',
@@ -32,11 +34,11 @@ throw new Error('Method not implemented.');
     description :
       'Members of a black ops team must track and eliminate a gang of masked murderers.',
     availableQuantity: 25,
+    qty : 0 , 
+    quantity : 1 
   };
 
   @Input() id!: string;
-  // @Output() deleteMovieEvent = new EventEmitter<IMovie>();
-  // @Output() editMovieEvent = new EventEmitter<IMovie>();
 
   show = true;
 movie: any;
@@ -45,13 +47,4 @@ movie: any;
     this.show = !this.show;
   }
 
-  // deleteMovie() {
-  //   console.log('Child ❌', this.movie);
-  //   this.deleteMovieEvent.emit(this.movie);
-  // }
-
-  // editMovie() {
-  //   console.log('Child ❌', this.movie);
-  //   this.editMovieEvent.emit(this.movie);
-  // }
 }

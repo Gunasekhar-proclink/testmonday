@@ -1,10 +1,12 @@
 export interface Iproduct {
+    quantity: number;
     id : string  ; 
     imageUrl : string ; 
     name : string ; 
     description : string ; 
     amount : number ; 
     availableQuantity : number 
+    qty : number ; 
 }
 
 export interface Iorder {

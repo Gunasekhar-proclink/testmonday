@@ -28,9 +28,11 @@
       @if(show){
       <p class="movie-summary">{{ product.description }}</p>
       }
+      <p>
+        Quantity : <strong>{{ product.availableQuantity }}</strong>
+      </p>
 
-
-      <button (click)="AddToCart()" mat-button>
+      <button (click)="addToCart()" mat-button>
         <span class="material-symbols-outlined">Add to Cart</span>
       </button>
     

@@ -13,11 +13,19 @@ import { Router } from '@angular/router';
   styleUrl: './products.component.scss'
 })
 export class ProductsComponent {
+product: any;
+
   productList: Array<Iproduct> = []; // Model -> View
   isLoading: boolean = true;
   msg = '';
-
+  addOneProduct(item: Iproduct) {
+    return this.productService.addProductP(item);
+  }
+  allProducts: Array<Iproduct> = [];
   constructor(public productService: ProductdataService, private router: Router) {}
+  trackById(index: number, product: Iproduct): string {
+    return product.id;
+  }
 
   ngOnInit() {
     this.loadMovies();

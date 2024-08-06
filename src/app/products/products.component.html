@@ -5,7 +5,8 @@
   <app-prodt
     [product]="movie"
     [id]="movie.id"
-  />
+    (addItemEvent)="addOneProduct(product)"/>
+  
   }
 </section>
 
