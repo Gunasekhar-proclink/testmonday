@@ -74,7 +74,7 @@ export class ProductdataService {
   }
 
   postOrderToApi(orderDetails: any): Promise<any> {
-    return fetch('https://66b0b3316a693a95b539d955.mockapi.io/orders', {
+    return fetch('https://66b0a87f6a693a95b539a6fd.mockapi.io/Orders', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -96,7 +96,7 @@ export class ProductdataService {
   }
 
   getOrdersP(): Promise<Iproduct[]> {
-    return fetch('https://66b0b3316a693a95b539d955.mockapi.io/orders').then(
+    return fetch('https://66b0a87f6a693a95b539a6fd.mockapi.io/Orders').then(
       (res) => res.json()
     );
   }}
