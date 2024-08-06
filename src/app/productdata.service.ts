@@ -20,4 +20,9 @@ export class ProductdataService {
       `${this.API_KEY}/${productId}`
     ).then((res) => res.json());
   }
-}
+
+  getOrdersP(): Promise<Iproduct[]> {
+    return fetch('https://66b0a87f6a693a95b539a6fd.mockapi.io/Orders').then(
+      (res) => res.json()
+    );
+  }}
